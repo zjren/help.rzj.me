@@ -1,0 +1,16 @@
+{{set . "title" "技术手册-蓦然回首"}}
+{{template "header.html" .}}
+
+{{.output}}
+
+<ul>
+{{range .dir_arr}}
+<li><a href="{{.}}/">{{.}}</a></li>
+{{end}}
+{{range .file_arr}}
+<li><a href="{{.}}">{{.}}</a></li>
+{{end}}
+</ul>
+
+{{template "footer.html" .}}
+
